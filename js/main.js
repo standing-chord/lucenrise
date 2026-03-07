@@ -9,10 +9,16 @@ e.preventDefault();
 const target = document.querySelector(this.getAttribute("href"));
 
 if(target){
+
 target.scrollIntoView({
 behavior:"smooth"
 });
+
 }
+
+/* 메뉴 클릭 시 header 숨기기 */
+
+header.classList.add("header-hide");
 
 });
 
