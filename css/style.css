@@ -171,7 +171,12 @@ top:0;
 width:100%;
 height:100%;
 
-background:rgba(0,0,0,0.35);
+/* 배경을 더 어둡게 + 위쪽은 조금 덜 어둡게 */
+
+background:linear-gradient(
+rgba(0,0,0,0.35),
+rgba(0,0,0,0.65)
+);
 
 z-index:-1;
 
