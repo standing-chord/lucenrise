@@ -1,6 +1,8 @@
 :root{
+
 --header-height:120px;
 --text-color:white;
+
 }
 
 *{
@@ -26,7 +28,7 @@ background-attachment:fixed;
 
 }
 
-/* header */
+/* HEADER */
 
 #header{
 
@@ -51,27 +53,29 @@ z-index:1000;
 
 }
 
-/* 숨김 상태 */
-
 .header-hide{
 transform:translateY(-100%);
 }
 
-/* logo */
+/* LOGO */
 
 .logo{
-font-size:32px;
+
+font-size:34px;
 font-weight:700;
 letter-spacing:4px;
 margin-bottom:10px;
+
 }
 
-/* menu */
+/* MENU */
 
 .menu{
+
 display:flex;
 gap:40px;
 list-style:none;
+
 }
 
 .menu a{
@@ -88,11 +92,10 @@ transition:0.3s;
 
 }
 
-/* hover underline animation */
-
 .menu a::after{
 
 content:"";
+
 position:absolute;
 left:0;
 bottom:0;
@@ -114,7 +117,7 @@ opacity:0.8;
 width:100%;
 }
 
-/* sections */
+/* SECTION */
 
 .section{
 
@@ -130,7 +133,11 @@ scroll-snap-align:start;
 
 padding-top:var(--header-height);
 
+position:relative;
+
 }
+
+/* TEXT */
 
 .content{
 max-width:800px;
@@ -138,7 +145,7 @@ max-width:800px;
 
 .content h1{
 
-font-size:48px;
+font-size:54px;
 margin-bottom:20px;
 letter-spacing:2px;
 
@@ -151,7 +158,7 @@ line-height:1.6;
 
 }
 
-/* 약간의 그라디언트로 가독성 확보 */
+/* OVERLAY */
 
 .section::before{
 
@@ -167,5 +174,23 @@ height:100%;
 background:rgba(0,0,0,0.35);
 
 z-index:-1;
+
+}
+
+/* FADE IN ANIMATION */
+
+.fade{
+
+opacity:0;
+transform:translateY(40px);
+
+transition:all 1s ease;
+
+}
+
+.fade.show{
+
+opacity:1;
+transform:translateY(0);
 
 }
