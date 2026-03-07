@@ -1,11 +1,14 @@
 html{
 scroll-behavior:smooth;
+scroll-snap-type:y mandatory;
 }
+
 
 body{
 margin:0;
 font-family:Arial, Helvetica, sans-serif;
 color:#333;
+scroll-snap-type:y mandatory;
 }
 
 .header{
@@ -38,8 +41,28 @@ font-weight:500;
 transition:0.3s;
 }
 
-.menu a:hover{
-color:#0077ff;
+.menu a{
+margin:0 15px;
+text-decoration:none;
+color:#444;
+font-size:16px;
+font-weight:500;
+position:relative;
+}
+
+.menu a::after{
+content:"";
+position:absolute;
+width:0;
+height:2px;
+background:#0077ff;
+left:0;
+bottom:-5px;
+transition:0.3s;
+}
+
+.menu a:hover::after{
+width:100%;
 }
 
 
@@ -49,8 +72,9 @@ display:flex;
 justify-content:center;
 align-items:center;
 text-align:center;
-padding-top:120px;
+padding-top:140px;
 box-sizing:border-box;
+scroll-snap-align:start;
 }
 
 .hero{
@@ -59,8 +83,9 @@ color:white;
 }
 
 .hero h2{
-font-size:40px;
-margin-bottom:10px;
+font-size:52px;
+margin-bottom:15px;
+letter-spacing:1px;
 }
 
 .about{
@@ -72,7 +97,8 @@ background:white;
 }
 
 .content{
-max-width:800px;
+max-width:900px;
+margin:auto;
 }
 
 .timeline{
