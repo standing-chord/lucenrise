@@ -8,9 +8,11 @@ e.preventDefault();
 
 const target = document.querySelector(this.getAttribute("href"));
 
+if(target){
 target.scrollIntoView({
 behavior:"smooth"
 });
+}
 
 });
 
@@ -26,7 +28,7 @@ window.addEventListener("scroll", () => {
 
 let currentScroll = window.pageYOffset;
 
-if(currentScroll > lastScroll){
+if(currentScroll > lastScroll && currentScroll > 100){
 
 header.classList.add("header-hide");
 
@@ -45,28 +47,29 @@ lastScroll = currentScroll;
 
 const faders = document.querySelectorAll(".fade");
 
-const appearOptions = {
+faders.forEach(el => {
+    el.style.opacity = "0";
+    el.style.transform = "translateY(40px)";
+});
 
-threshold:0.3
-
-};
-
-const appearOnScroll = new IntersectionObserver(function(entries){
+const observer = new IntersectionObserver((entries, observer) => {
 
 entries.forEach(entry => {
 
-if(!entry.isIntersecting){
-return;
+if(entry.isIntersecting){
+
+entry.target.style.transition = "all 1s ease";
+entry.target.style.opacity = "1";
+entry.target.style.transform = "translateY(0)";
+
+observer.unobserve(entry.target);
+
 }
 
-entry.target.classList.add("show");
-
 });
 
-}, appearOptions);
-
-faders.forEach(fader => {
-
-appearOnScroll.observe(fader);
-
+},{
+threshold:0.3
 });
+
+faders.forEach(el => observer.observe(el));
