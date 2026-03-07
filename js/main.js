@@ -1,11 +1,41 @@
-window.addEventListener("scroll", function(){
+// 메뉴 클릭 시 부드러운 스크롤
 
-const header = document.querySelector(".header");
+document.querySelectorAll(".menu a").forEach(anchor => {
 
-if(window.scrollY > 50){
-header.classList.add("scrolled");
+anchor.addEventListener("click", function(e){
+
+e.preventDefault();
+
+const target = document.querySelector(this.getAttribute("href"));
+
+target.scrollIntoView({
+behavior:"smooth"
+});
+
+});
+
+});
+
+
+// header hide / show
+
+let lastScroll = 0;
+const header = document.getElementById("header");
+
+window.addEventListener("scroll", () => {
+
+let currentScroll = window.pageYOffset;
+
+if(currentScroll > lastScroll){
+
+header.classList.add("header-hide");
+
 }else{
-header.classList.remove("scrolled");
+
+header.classList.remove("header-hide");
+
 }
+
+lastScroll = currentScroll;
 
 });
