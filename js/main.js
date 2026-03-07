@@ -23,16 +23,19 @@ behavior:"smooth"
 
 let lastScroll = 0;
 const header = document.getElementById("header");
+const scrollThreshold = 150;
 
 window.addEventListener("scroll", () => {
 
-let currentScroll = window.pageYOffset;
+const currentScroll = window.pageYOffset;
 
-if(currentScroll > lastScroll && currentScroll > 100){
+if(currentScroll > lastScroll && currentScroll > scrollThreshold){
 
 header.classList.add("header-hide");
 
-}else{
+}
+
+else if(currentScroll < lastScroll){
 
 header.classList.remove("header-hide");
 
