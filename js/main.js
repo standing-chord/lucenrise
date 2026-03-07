@@ -1,7 +1,16 @@
+// header 요소
+const header = document.getElementById("header");
+
+// 상태 변수
+let lastScroll = 0;
 let isMenuScrolling = false;
 
+// header 숨김 기준 스크롤
+const scrollThreshold = 150;
 
-// smooth scroll
+
+
+// 메뉴 클릭 → smooth scroll + header 숨김
 
 document.querySelectorAll(".menu a").forEach(anchor => {
 
@@ -13,16 +22,18 @@ const target = document.querySelector(this.getAttribute("href"));
 
 if(target){
 
+// 메뉴 이동 상태 활성화
 isMenuScrolling = true;
 
+// 부드러운 스크롤
 target.scrollIntoView({
 behavior:"smooth"
 });
 
+// header 숨기기
 header.classList.add("header-hide");
 
-/* 스크롤 완료 후 다시 활성화 */
-
+// 스크롤 애니메이션 끝난 후 scroll 이벤트 다시 활성화
 setTimeout(()=>{
 isMenuScrolling = false;
 },800);
@@ -34,22 +45,24 @@ isMenuScrolling = false;
 });
 
 
-// header hide show
 
-let lastScroll = 0;
-const header = document.getElementById("header");
-const scrollThreshold = 150;
+// 스크롤 시 header hide / show
 
 window.addEventListener("scroll", () => {
 
-const currentScroll = window.pageYOffset;
+// 메뉴 이동 중이면 scroll 로직 무시
+if(isMenuScrolling) return;
 
+let currentScroll = window.pageYOffset;
+
+// 아래로 스크롤
 if(currentScroll > lastScroll && currentScroll > scrollThreshold){
 
 header.classList.add("header-hide");
 
 }
 
+// 위로 스크롤
 else if(currentScroll < lastScroll){
 
 header.classList.remove("header-hide");
