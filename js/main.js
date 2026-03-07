@@ -41,35 +41,3 @@ header.classList.remove("header-hide");
 lastScroll = currentScroll;
 
 });
-
-
-// fade in animation
-
-const faders = document.querySelectorAll(".fade");
-
-faders.forEach(el => {
-    el.style.opacity = "0";
-    el.style.transform = "translateY(40px)";
-});
-
-const observer = new IntersectionObserver((entries, observer) => {
-
-entries.forEach(entry => {
-
-if(entry.isIntersecting){
-
-entry.target.style.transition = "all 1s ease";
-entry.target.style.opacity = "1";
-entry.target.style.transform = "translateY(0)";
-
-observer.unobserve(entry.target);
-
-}
-
-});
-
-},{
-threshold:0.3
-});
-
-faders.forEach(el => observer.observe(el));
