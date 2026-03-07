@@ -1,4 +1,4 @@
-// 메뉴 클릭 시 부드러운 스크롤
+// smooth scroll
 
 document.querySelectorAll(".menu a").forEach(anchor => {
 
@@ -17,7 +17,7 @@ behavior:"smooth"
 });
 
 
-// header hide / show
+// header hide show
 
 let lastScroll = 0;
 const header = document.getElementById("header");
@@ -37,5 +37,36 @@ header.classList.remove("header-hide");
 }
 
 lastScroll = currentScroll;
+
+});
+
+
+// fade in animation
+
+const faders = document.querySelectorAll(".fade");
+
+const appearOptions = {
+
+threshold:0.3
+
+};
+
+const appearOnScroll = new IntersectionObserver(function(entries){
+
+entries.forEach(entry => {
+
+if(!entry.isIntersecting){
+return;
+}
+
+entry.target.classList.add("show");
+
+});
+
+}, appearOptions);
+
+faders.forEach(fader => {
+
+appearOnScroll.observe(fader);
 
 });
