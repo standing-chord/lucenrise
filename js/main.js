@@ -37,6 +37,7 @@ header.classList.add("header-hide");
 setTimeout(()=>{
 isMenuScrolling = false;
 header.classList.remove("header-hide");
+lastScroll = window.pageYOffset;
 },800);
 
 }
