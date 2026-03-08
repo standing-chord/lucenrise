@@ -65,6 +65,7 @@ body{
     font-size:16px;
     position:relative;
     padding-bottom:4px;
+    opacity: 0.8;
     transition: all 0.3s ease-in-out;
 }
 
@@ -80,7 +81,7 @@ body{
 }
 
 .menu a:hover{
-    transform: translateY(-4px);
+    opacity: 1;
 }
 
 .menu a:hover::after{
