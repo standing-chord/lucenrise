@@ -56,13 +56,9 @@ if(isMenuScrolling) return;
 let currentScroll = window.pageYOffset;
 
 
-if(currentScroll === 0) {
-  // 페이지 맨 위면 항상 헤더 보임
-  header.classList.remove("header-hide");
-}
-  
+
 // 아래로 스크롤
-else if(currentScroll > lastScroll && currentScroll > scrollThreshold){
+if(currentScroll > lastScroll && currentScroll > scrollThreshold){
 
   header.classList.add("header-hide");
 }
@@ -75,4 +71,16 @@ else if(currentScroll < lastScroll){
 
 lastScroll = currentScroll;
 
+});
+
+
+// 마우스 휠 이벤트 감지 (휠 위로 → 헤더 보임)
+window.addEventListener("wheel", (e) => {
+    // 메뉴 스크롤 중이면 무시
+    if(isMenuScrolling) return;
+
+    if(currentScroll == 0 && e.deltaY < 0){ 
+        // deltaY < 0 : 휠 위로
+        header.classList.remove("header-hide");
+    }
 });
