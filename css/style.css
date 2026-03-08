@@ -126,28 +126,21 @@ body{
     line-height:1.6;
 }
 
-/* ============================= */
-/* 자세히 보기 링크 (수정됨) */
-/* ============================= */
 
-/* ❌ 기존 detail-link 두 개 정의 제거 */
-
-/* ✅ 하나로 정리 */
 .detail-link{
-    position:absolute;        /* 부모(section) 기준 배치 */
-    bottom:40px;              /* 섹션 아래쪽 */
-    left:50%;                 /* 중앙 기준점 */
-    transform:translateX(-50%); /* 정확히 중앙 */
-
-    color:white;              /* 요청대로 흰색 */
+    display:block;           /* 가운데 정렬 가능하게 */
+    margin-top:40px;         /* 본문 아래 간격 */
+    
+    color:white;             /* 흰색 글씨 */
     text-decoration:none;
     font-size:16px;
-    opacity:0.6;              /* 약간 투명 */
+    opacity:0.6;
     transition:0.3s;
 }
 
 .detail-link:hover{
     opacity:1;
+}
 }
 
 /* 스크롤 화살표 기호 */
