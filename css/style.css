@@ -109,10 +109,10 @@ body{
 
 .content{
     width: 80%;
-    max-width: 600px;
-    margin: 0 auto;
+    max-width: 800px; /*본문 가로 최대 길이*/
+    margin: 0 auto;   /*본문 중앙 정렬*/
     position: relative;
-    top: -10%;
+    top: -10%;        /*중간보다 살짝 아래에 배치*/
 }
 
 .content h1{
@@ -134,7 +134,7 @@ body{
     color:white;             /* 흰색 글씨 */
     text-decoration:none;
     font-size:16px;
-    opacity:0.6;
+    opacity:0.7;
     transition:0.3s;
 }
 
