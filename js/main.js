@@ -37,7 +37,7 @@ document.querySelectorAll(".menu a").forEach(anchor => {
         // ---------------------------
         lastScroll = window.pageYOffset;
 
-      }, 800);
+      }, 1000);
     }
   });
 });
