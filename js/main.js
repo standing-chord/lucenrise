@@ -35,8 +35,8 @@ header.classList.add("header-hide");
 
 // 스크롤 애니메이션 끝난 후 scroll 이벤트 다시 활성화
 setTimeout(() => {
-  isMenuScrolling = false;
   header.classList.remove("header-hide"); // 헤더 내려오기
+  isMenuScrolling = false;
 
   // 마지막 위치를 현재 스크롤로 초기화
   lastScroll = window.pageYOffset;
