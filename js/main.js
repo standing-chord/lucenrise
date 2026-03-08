@@ -30,14 +30,16 @@ document.querySelectorAll(".menu a").forEach(anchor => {
       // 스크롤 애니메이션 끝난 후 처리
       setTimeout(() => {
         header.classList.remove("header-hide"); // 헤더 내려오기
-        isMenuScrolling = false;
 
-        // ---------------------------
-        // 수정: 마지막 위치를 현재 스크롤로 초기화
-        // ---------------------------
         lastScroll = window.pageYOffset;
 
-      }, 1000);
+      }, 800);
+
+      setTimeout(() => {
+        isMenuScrolling = false;
+      }, 100);
+
+      
     }
   });
 });
