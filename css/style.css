@@ -101,19 +101,21 @@ body{
 
 /* TEXT */
 .content{
-    max-width:800px;
+    width: 80%;            /* 화면 너비의 80% */
+    max-width: 800px;      /* 최대 800px */
+    margin: 0 auto;        /* 가운데 정렬 */
     position: relative;
-    top: -10%; /* 화면 중앙보다 살짝 위로 올림 */
+    top: -10%;             /* 화면 중앙보다 살짝 위로 올림 */
 }
 
 .content h1{
-    font-size:50px;
+    font-size: clamp(24px, 5vw, 50px); /* 화면 크기에 따라 24~50px 사이로 자동 조절 */
     margin-bottom:20px;
     letter-spacing:2px;
 }
 
 .content p{
-    font-size:20px;
+    font-size: clamp(14px, 2.5vw, 20px); /* 화면 크기에 따라 14~20px 사이로 자동 조절 */
     line-height:1.6;
 }
 
