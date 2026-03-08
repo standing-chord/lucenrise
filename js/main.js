@@ -4,6 +4,7 @@ const header = document.getElementById("header");
 // 상태 변수
 let lastScroll = 0;
 let isMenuScrolling = false;
+let ignoreScroll = false;
 
 // header 숨김 기준 스크롤
 const scrollThreshold = 150;
@@ -42,7 +43,7 @@ setTimeout(() => {
   lastScroll = window.pageYOffset;
 
   // 이동 직후 잠깐 scroll 이벤트 무시
-  const ignoreScroll = true;
+  ignoreScroll = true;
   setTimeout(() => {
     ignoreScroll = false;
   }, 50); // 50ms 정도만 잠깐
@@ -60,22 +61,20 @@ setTimeout(() => {
 
 window.addEventListener("scroll", () => {
 
-// 메뉴 이동 중이면 scroll 로직 무시
-if(isMenuScrolling) return;
 
+if (isMenuScrolling || ignoreScroll) return; // 이동 중이나 무시 중이면 로직 실행 안함
+  
 let currentScroll = window.pageYOffset;
 
 
 
 // 아래로 스크롤
 if(currentScroll > lastScroll && currentScroll > scrollThreshold){
-
   header.classList.add("header-hide");
 }
 
 // 위로 스크롤
 else if(currentScroll < lastScroll){
-
   header.classList.remove("header-hide");
 }
 
