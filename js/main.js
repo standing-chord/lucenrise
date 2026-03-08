@@ -35,7 +35,7 @@ document.querySelectorAll(".menu a").forEach(anchor => {
       setTimeout(() => {
         isMenuScrolling = false;
         lastScroll = window.pageYOffset;
-      }, 900);
+      }, 950);
 
       
     }
