@@ -1,51 +1,86 @@
 <!DOCTYPE html>
 <html lang="ko">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>루센라이즈 연혁</title>
-    <link rel="stylesheet" href="css/style.css">
+<meta charset="UTF-8">
+<title>루센라이즈 연혁</title>
+
+
+<style>
+    body{
+        margin:0;
+        font-family: Arial, sans-serif;
     
-        
-    <style>
+        /* 배경 이미지 */ 
+        background-image: url("pictures/background_transparent15.jpg"); 
+        background-size: cover; 
+        background-position: center; 
+        background-repeat: no-repeat; 
     
-        /* 뒤로가기 버튼*/
-            
-        .back-link{
-            display:block;
-            margin-top:40px;
-            font-size:16px;
-            color:white;
-            text-decoration:none;
-            cursor:pointer;
-            opacity:0.7;
-        }
+        /* 중앙 정렬 */ 
+        display:flex; 
+        justify-content:center; 
+        align-items:center; 
+        height:100vh; 
+        color:white;
+    }
+    
+    body::before{
+        content:"";
+        position:absolute;
+        top:0;
+        left:0;
+        width:100%;
+        height:100%;
+        background:rgba(0,0,0,0.45);
+        z-index:-1;
+    }
+
+    
+    /* 글 영역 */
+    .content{
+        max-width:800px;
+        text-align:center;
+        padding:40px;
+        border-radius:8px;
+    }
+    
+    
+    
+    /* 뒤로가기 버튼*/
         
-        .back-link:hover{
-            opacity:1;
-        }
-    </style>
+    .back-link{
+        display:block;
+        margin-top:40px;
+        font-size:16px;
+        color:white;
+        text-decoration:none;
+        cursor:pointer;
+        opacity:0.7;
+    }
+    
+    .back-link:hover{
+        opacity:1;
+    }
+</style>
+
+    
 </head>
 
 <body>
-
     <div class="content">
     
         <h1>회사 연혁</h1>
-        
-        <p class = 'spacer'> </p>
-        <p class = 'spacer'> </p>
         <p class = 'spacer'> </p>
         <p class = 'spacer'> </p>
         
         
         <p>
-            <span style="font-weight: bold; font-size:20px;">2011 기업 설립</span><br>
+            <span style="font-weight: bold; font-size:20px;">2011 회사 설립</span><br>
             기업명 '항진', 대표이사 이재진
         </p>
-        <p class = 'spacer'> </p>
+
         <p>
-            <span style="font-weight: bold; font-size:20px;">2016 기업 인수</span><br>
+            <span style="font-weight: bold; font-size:20px;">회사 인수</span><br>
             기업명 '루센라이즈', 대표이사 이서현
         </p>
         
