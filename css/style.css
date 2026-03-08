@@ -80,7 +80,7 @@ body{
 }
 
 .menu a:hover{
-    transform: translateY(-3px); /* -3px 만큼 위로 */
+    transform: translateY(-10px); /* -3px 만큼 위로 */
 }
 
 .menu a:hover::after{
