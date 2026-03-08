@@ -17,7 +17,7 @@ html{
 
 body{
     color:var(--text-color);
-    background-image:url("../pictures/shutterstock_1199235616.jpg");
+    background-image:url("../pictures/background_transparent50.jpg");
     background-size:cover;
     background-position:center;
     background-attachment:fixed;
