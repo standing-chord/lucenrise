@@ -34,11 +34,19 @@ behavior:"smooth"
 header.classList.add("header-hide");
 
 // 스크롤 애니메이션 끝난 후 scroll 이벤트 다시 활성화
-setTimeout(()=>{
-isMenuScrolling = false;
-header.classList.remove("header-hide");
-lastScroll = window.pageYOffset;
-},800);
+setTimeout(() => {
+  isMenuScrolling = false;
+  header.classList.remove("header-hide"); // 헤더 내려오기
+
+  // 마지막 위치를 현재 스크롤로 초기화
+  lastScroll = window.pageYOffset;
+
+  // 이동 직후 잠깐 scroll 이벤트 무시
+  const ignoreScroll = true;
+  setTimeout(() => {
+    ignoreScroll = false;
+  }, 50); // 50ms 정도만 잠깐
+}, 800);
 
 }
 
