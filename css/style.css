@@ -100,6 +100,12 @@ body{
 }
 
 /* TEXT */
+
+.spacer {
+    margin: 20px 0;  /* 위아래 공백 20px */
+    height: 1px;     /* 높이를 최소로 지정 */
+}
+
 .content{
     width: 80%;            /* 화면 너비의 80% */
     max-width: 800px;      /* 최대 800px */
