@@ -55,18 +55,22 @@ if(isMenuScrolling) return;
 
 let currentScroll = window.pageYOffset;
 
+
+if(currentScroll === 0) {
+  // 페이지 맨 위면 항상 헤더 보임
+  header.classList.remove("header-hide");
+}
+  
 // 아래로 스크롤
-if(currentScroll > lastScroll && currentScroll > scrollThreshold){
+else if(currentScroll > lastScroll && currentScroll > scrollThreshold){
 
-header.classList.add("header-hide");
-
+  header.classList.add("header-hide");
 }
 
 // 위로 스크롤
 else if(currentScroll < lastScroll){
 
-header.classList.remove("header-hide");
-
+  header.classList.remove("header-hide");
 }
 
 lastScroll = currentScroll;
