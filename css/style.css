@@ -109,7 +109,7 @@ body{
 
 .content{
     width: 80%;            /* 화면 너비의 80% */
-    max-width: 800px;      /* 최대 800px */
+    max-width: 600px;      /* 최대 600px */
     margin: 0 auto;        /* 가운데 정렬 */
     position: relative;
     top: -10%;             /* 화면 중앙보다 살짝 위로 올림 */
@@ -136,14 +136,14 @@ body{
     left: 50%;
     transform: translateX(-50%);
 
-    color: rgba(255,255,255,0.5);
+    color: rgba(255,255,255,0.6) !important;
     text-decoration: none;
     font-size: 16px;
     transition: 0.3s;
 }
 
 .detail-link:hover{
-    color: rgba(255,255,255,0.9);
+    color: rgba(255,255,255,1) !important;
 }.detail-link{
     position: absolute;
     bottom: 40px;
