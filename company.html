@@ -2,48 +2,45 @@
 <html lang="ko">
 <head>
 <meta charset="UTF-8">
-<title>기업 정보</title>
+<title>루센라이즈 기업 정보</title>
 
 <style>
-    body{
-        margin:0;
-        font-family: Arial, sans-serif;
+body{
+    margin:0;
+    font-family: Arial, sans-serif;
 
-        /* 배경 이미지 */
-        background-image: url("background.jpg");
-        background-size: cover;
-        background-position: center;
-        background-repeat: no-repeat;
+    /* 배경 이미지 */
+    background-image: url("pictures/background_transparent15.jpg");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
 
-        /* 가운데 정렬 */
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        height: 100vh;
-        text-align: center;
-        color: white;
-    }
+    /* 중앙 정렬 */
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    height:100vh;
 
-    .content{
-        max-width: 800px;
-        padding: 20px;
-        background: rgba(0,0,0,0.4); /* 글 가독성용 반투명 */
-        border-radius: 10px;
-    }
+    text-align:center;
+    color:white;
+}
 
-    .back-button{
-        margin-top:40px;
-        padding:10px 20px;
-        font-size:16px;
-        border:none;
-        border-radius:5px;
-        cursor:pointer;
-        background:#ffffff;
-    }
+.content{
+    max-width:800px;
+}
 
-    .back-button:hover{
-        background:#ddd;
-    }
+.back-link{
+    display:block;
+    margin-top:40px;
+    font-size:16px;
+    color:white;
+    text-decoration:none;
+    cursor:pointer;
+}
+
+.back-link:hover{
+    text-decoration:underline;
+}
 </style>
 </head>
 
@@ -54,9 +51,8 @@
 <h1>기업 정보</h1>
 
 <p>
-개인과 기업의 자산을 체계적으로 관리하고<br>
-맞춤형 재무 전략을 통해 안정적인 자산 성장과<br>
-효율적인 가치 이전을 지원합니다.
+소재지<br>
+서울시 영등포구 선유로 70 우리벤처타운2
 </p>
 
 <p>
@@ -64,9 +60,9 @@
 전문적인 분석과 전략을 제공합니다.
 </p>
 
-<button class="back-button" onclick="history.back()">
-이전 페이지로 돌아가기
-</button>
+<a class="back-link" onclick="history.back()">
+← 이전 페이지로 돌아가기
+</a>
 
 </div>
 
