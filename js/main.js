@@ -37,7 +37,7 @@ document.querySelectorAll(".menu a").forEach(anchor => {
 
       setTimeout(() => {
         isMenuScrolling = false;
-      }, 100);
+      }, 900);
 
       
     }
