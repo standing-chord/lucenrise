@@ -140,7 +140,6 @@ body{
     opacity:0;
     transform:translateY(40px);
     animation:fadeUp 1s ease forwards;
-    --target-opacity:1; /* 기본 목표 opacity */
 }
 
 /* 순차 등장 */
