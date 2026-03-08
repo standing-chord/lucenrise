@@ -107,11 +107,6 @@ body{
 
 /* TEXT */
 
-.spacer {
-    margin: 20px 0;
-    height: 1px;
-}
-
 .content{
     width: 80%;
     max-width: 800px; /*본문 가로 최대 길이*/
