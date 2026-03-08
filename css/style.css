@@ -65,7 +65,7 @@ body{
     font-size:16px;
     position:relative;
     padding-bottom:4px;
-    transition: transform 0.3s ease-in-out;
+    transition: all 0.3s ease-in-out;
 }
 
 .menu a::after{
@@ -76,7 +76,7 @@ body{
     width:0;
     height:2px;
     background:white;
-    transition: width 0.3s ease-in-out;
+    transition: all 0.3s ease-in-out;
 }
 
 .menu a:hover{
